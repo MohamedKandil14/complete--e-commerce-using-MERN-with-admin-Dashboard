@@ -39,18 +39,23 @@ const AllProducts = () => {
                 to={`/dashboard/admin/product/${p.slug}`}
                 className="product-link"
               >
-                <div className="card m-2 text-center" style={{ width: "13rem" }}>
+  <div className="card m-2 text-center mx-4" style={{ width: "15rem" }}>
                   <img
                     src={`/api/v1/product/productphoto/${p._id}`}
-                    className="card-img-top w-75 mx-4 mt-2 "
+                    className="card-img-top w-75 mx-4 mt-3 "
                     alt={p.name}
                   />
                   <div className="card-body">
-                    <h5 className="card-title">{p.name}</h5>
-                    <p className="card-title">{p.description}</p>
-                    <p className="card-title"><strong>Price : </strong>{p.price} </p>
+                  <h5 className="card-title"> {p.name}</h5>
+                  <p className="card-text">{p.description.substring(0,30)}</p>
+
+                    {/* <h5 className="card-title">Category:{p.category}</h5> */}
+                   
+                    <h5 className="card-title">Price : {p.price}</h5>
+    
                   </div>
                 </div>
+              
               </Link>
             ))}
           </div>

@@ -42,7 +42,7 @@ const ProductDetails = () => {
   };
   return (
     <Layout>
-      <div className="row container product-details">
+      <div className="row container product-details mt-4">
         <div className="col-md-6">
           <img
             src={`/api/v1/product/productphoto/${product._id}`}
@@ -79,7 +79,7 @@ const ProductDetails = () => {
           {relatedProducts?.map((p) => (
             <div className="card m-2" key={p._id}>
               <img
-                src={`/api/v1/product/product-photo/${p._id}`}
+                src={`/api/v1/product/productphoto/${p._id}`}
                 className="card-img-top"
                 alt={p.name}
               />
